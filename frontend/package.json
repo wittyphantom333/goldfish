@@ -27,7 +27,9 @@
     "clean": "rm -rf dist",
     "dev": "cross-env NODE_ENV=development node build/dev-server.js",
     "lint": "eslint --ext .js .vue client/*",
-    "lint:fix": "eslint --fix --ext .js .vue electron.js client/* build/* config/*"
+    "lint:fix": "eslint --fix --ext .js .vue electron.js client/* build/* config/*",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "animate.css": "3.5.2",
@@ -41,7 +43,7 @@
     "font-awesome": "4.7.0",
     "highlight.js": "^9.12.0",
     "hint.css": "^2.4.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.20",
     "mdi": "^1.8.36",
     "moment": "^2.19.3",
     "vue": "^2.5.13",
@@ -52,7 +54,8 @@
     "vue-nprogress": "0.1.5",
     "vue-router": "^2.3.0",
     "vuex": "^2.2.1",
-    "vuex-router-sync": "^4.1.2"
+    "vuex-router-sync": "^4.1.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",
@@ -94,5 +97,6 @@
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.14.0",
     "webpack-merge": "^3.0.0"
-  }
+  },
+  "snyk": true
 }

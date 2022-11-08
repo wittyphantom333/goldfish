@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.15
 
 # Version of goldfish to install
 ENV GOLDFISH_VERSION=v0.9.0 \
